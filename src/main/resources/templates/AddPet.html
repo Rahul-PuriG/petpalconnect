@@ -1,0 +1,91 @@
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pet Form</title>
+</head>
+<body>
+
+<div id="nav">
+        <img
+          src="images/petPallogo-removebg-preview.png"
+          alt=""
+        />
+        <h4>Pet Listings</h4>
+        <h4>AdoPet</h4>
+        <h4>PawCare</h4>
+        <h4>Fundraising </h4>
+        <h4>Events & WorkShops</h4>
+        <ul>
+          <li><a href="/login" class="hover-link primary-button">Login</a></li>
+        </ul>
+</div>
+
+<h2>Add/Edit Pet</h2>
+
+<form th:object="${pet}" method="post" action="/addPet">
+    <input type="hidden" th:field="*{id}"/>
+
+    <label for="petName">Pet Name:</label>
+    <input type="text" th:field="*{petName}" required/><br/>
+
+    <label for="species">Species:</label>
+    <input type="text" th:field="*{species}" required/><br/>
+
+    <label for="age">Age:</label>
+    <input type="number" th:field="*{age}" required/><br/>
+
+    <label for="details">Details:</label>
+    <input type="text" th:field="*{details}"/><br/>
+
+    
+    <label for="image">Image:</label>
+    <input type="file" name="image" accept="image/*" onchange="loadFile(event)" />
+    <img th:if="${pet.image != null}" th:src="'data:image/jpeg;base64,' + ${#strings.new(#strings.base64Encode(pet.image))}" style="max-width:100px; max-height:100px;"/>
+
+    <label for="available">Available:</label>
+    <input type="checkbox" th:field="*{available}"/><br/>
+
+    <label for="breed">Breed:</label>
+    <input type="text" th:field="*{breed}"/><br/>
+
+    <label for="color">Color:</label>
+    <input type="text" th:field="*{color}"/><br/>
+
+    <label for="gender">Gender:</label>
+    <input type="text" th:field="*{gender}"/><br/>
+
+    <label for="size">Size:</label>
+    <input type="text" th:field="*{size}"/><br/>
+
+    <label for="weight">Weight:</label>
+    <input type="number" step="0.1" th:field="*{weight}"/><br/>
+
+    <label for="ownerName">Owner Name:</label>
+    <input type="text" th:field="*{ownerName}"/><br/>
+
+    <label for="ownerContact">Owner Contact:</label>
+    <input type="text" th:field="*{ownerContact}"/><br/>
+
+    <label for="vaccinated">Vaccinated:</label>
+    <input type="checkbox" th:field="*{vaccinated}"/><br/>
+
+    <label for="medicalHistory">Medical History:</label>
+    <textarea th:field="*{medicalHistory}"></textarea><br/>
+
+    <label for="dateAdded">Date Added:</label>
+    <input type="datetime-local" th:field="*{dateAdded}"/><br/>
+
+    <button type="submit">Save</button>
+</form>
+
+<script>
+    // Function to preview the selected image
+    function loadFile(event) {
+        var output = document.getElementById('output');
+        output.src = URL.createObjectURL(event.target.files[0]);
+    }
+</script>
+
+</body>
+</html> -->

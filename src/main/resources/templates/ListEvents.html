@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetPal Connect</title>
+    <link
+      rel="shortcut icon"
+      href="images/petPallogo-removebg-preview.png"
+      type="image/x-icon"
+    />
+    <link
+      href="images/petPallogo-removebg-preview.png"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="javascript/script.js"></script>
+  </head>
+
+  <body>
+    <div id="nav">
+      <img
+        src="images/petPallogo-removebg-preview.png"
+        alt=""
+      />
+      <!-- <h4>Pet Listings</h4> -->
+      <!-- <h4>AdoPet</h4> -->
+      <a th:href="@{/petNews}"><h4>PetNews</h4></a>
+      <a th:href="@{/addDonor}"><h4>Fundraising </h4></a>
+      <a th:href="@{/addEvent}"h4>Events & WorkShops</h4></a>
+      <a href="/login" class="hover-link primary-button">Login</a>
+      <a href="/signup" class="hover-link secondary-button">Login</a>
+    </div>
+    
+    <h2>List of Events</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Event Name</th>
+                <th>Event Date</th>
+                <th>Location</th>
+                <th>Participant Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="event : ${events}">
+                <td th:text="${event.id}"></td>
+                <td th:text="${event.eventName}"></td>
+                <td th:text="${event.eventDate}"></td>
+                <td th:text="${event.location}"></td>
+                <td th:text="${event.participantName}"></td>
+                <td th:text="${event.email}"></td>
+                <td th:text="${event.phone}"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+    <!-- You may adjust this part based on your specific requirements -->
+    <h5>Total Events: <span th:text="${events.size()}"></span></h5>
+    </div>
+    <a href="/">Back to Main Page</a>
+    <a th:href="@{/addEvent}">Add Another Event</a>
+</body>
+</html>

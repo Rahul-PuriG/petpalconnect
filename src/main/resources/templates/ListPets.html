@@ -1,0 +1,60 @@
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List Pets</title>
+</head>
+<body>
+
+<h2>List of Pets</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Pet Name</th>
+            <th>Species</th>
+            <th>Age</th>
+            <th>Details</th>
+            <th>Image</th>
+            <th>Available</th>
+            <th>Breed</th>
+            <th>Color</th>
+            <th>Gender</th>
+            <th>Size</th>
+            <th>Weight</th>
+            <th>Owner Name</th>
+            <th>Owner Contact</th>
+            <th>Vaccinated</th>
+            <th>Medical History</th>
+            <th>Date Added</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="pet : ${pets}">
+            <td th:text="${pet.id}"></td>
+            <td th:text="${pet.petName}"></td>
+            <td th:text="${pet.species}"></td>
+            <td th:text="${pet.age}"></td>
+            <td th:text="${pet.details}"></td>
+            <!-- Display image as base64 (for simplicity, consider optimizing this) -->
+            <td>
+                <img th:if="${pet.image != null}" th:src="'data:image/jpeg;base64,' + ${#strings.bytesToBase64(pet.image)}" style="max-width:100px; max-height:100px;"/>
+            </td>
+            <td th:text="${pet.available}"></td>
+            <td th:text="${pet.breed}"></td>
+            <td th:text="${pet.color}"></td>
+            <td th:text="${pet.gender}"></td>
+            <td th:text="${pet.size}"></td>
+            <td th:text="${pet.weight}"></td>
+            <td th:text="${pet.ownerName}"></td>
+            <td th:text="${pet.ownerContact}"></td>
+            <td th:text="${pet.vaccinated}"></td>
+            <td th:text="${pet.medicalHistory}"></td>
+            <td th:text="${pet.dateAdded}"></td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html> -->

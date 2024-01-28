@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Donor Details</h2>
+
+  <table>
+      <tr>
+          <th>ID</th>
+          <th>Donor Name</th>
+          <th>Donation Amount</th>
+          <th>Donor Email</th>
+          <th>Donor Number</th>
+          <th>Address</th>
+      </tr>
+      <tr th:each="donor : ${donors}">
+          <td th:text="${donor.id}"></td>
+          <td th:text="${donor.donorName}"></td>
+          <td th:text="${donor.donateAmount}"></td>
+          <td th:text="${donor.donorEmail}"></td>
+          <td th:text="${donor.donorNumber}"></td>
+          <td th:text="${donor.address}"></td>
+      </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thank You for Your Generous Donation!</title>
+</head>
+<body>
+<div th:each="donor : ${messages}">
+    <p>
+        Dear <strong><span th:text="${donor.donorName}"></span></strong>,
+    </p>
+    <p>
+        I hope this message finds you well. Thank you so much for your recent donation of <br><strong><span th:text="${donor.donateAmount}"></span></strong>$</br> to Pet-Pal Connect. Your generosity is deeply appreciated and will directly impact our mission to save the lives of animals and feed them.
+    </p>
+
+    <p>
+        Your support means the world to us, and we are grateful for individuals like you who make a difference. If you have any specific preferences on how you'd like your donation allocated, or if there's anything else you'd like to share, please feel free to let us know.
+    </p>
+
+    <p>
+        Once again, thank you for your kindness and support.
+    </p>
+
+    <p>
+        Best regards,
+        <br/>
+        Pet-Pal Connect Team
+        <br/>
+        101 Fairhill Avenue<br/>
+        Brampton<br/>
+        Ontario <br/>
+        Canada(L7A2H5)
+    </p>
+</div>
+</body>
+</html>

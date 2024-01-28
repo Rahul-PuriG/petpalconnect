@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Confirmation</title>
+</head>
+<body>
+
+<div th:each="event : ${messages}">
+    <h2>Event Confirmation</h2>
+    <p th:text="'Dear ' + ${event.participantName} + ','"></p>
+    
+    <p>We are pleased to confirm your participation in the upcoming event. Here are the details:</p>
+
+    <ul>
+        <li><strong>Participant Name:</strong> <span th:text="${event.participantName}"></span></li>
+        <li><strong>Date of Event:</strong> <span th:text="${event.eventDate}"></span></li>
+        <li><strong>Event Time:</strong> <span th:text="${event.eventTime}"></span></li>
+        <li><strong>Event Name:</strong> <span th:text="${event.eventName}"></span></li>
+        <li><strong>Location of Event:</strong> <span th:text="${event.location}"></span></li>
+    </ul>
+    
+    
+    <p>We look forward to your presence and hope you have a great time at the event. If you have any further questions or require additional information, please feel free to reach out.</p>
+
+    <p>Best regards,</p>
+    <p>Event Team</p>
+    <p>101 Fairhill Avenue,Brampton <br>Ontario (L7A2H5) <br>Canada</p>
+</div>
+
+</body>
+</html>

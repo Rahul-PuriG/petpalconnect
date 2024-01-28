@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+ xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetPal Connect</title>
+    <link
+      rel="shortcut icon"
+      href="images/petPallogo-removebg-preview.png"
+      type="image/x-icon"
+    />
+    <link
+      href="images/petPallogo-removebg-preview.png"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="javascript/script.js"></script>
+  </head>
+
+  <body>
+    <div id="nav">
+    <a th:href="@{/}"><img
+        src="images/petPallogo-removebg-preview.png"
+        alt=""
+      />
+    </a>
+      <!-- <h4>Pet Listings</h4> -->
+      <!-- <h4>AdoPet</h4> -->
+      <a th:href="@{/petNews}"><h4>PetNews</h4></a>
+      <a th:href="@{/addDonor}"><h4>Fundraising </h4></a>
+      <a th:href="@{/addEvent}"><h4>Events & WorkShops</h4></a>
+      <a th:href="@{/login}" class="hover-link primary-button"><h4>Login</h4></a>
+      <a th:href="@{/logout}" class="hover-link primary-button"><h4>Logout</h4></a>
+
+    </div>
+    <video
+      autoplay
+      loop
+      muted
+      src="vidoes/stock-footage-funny-pug-dog-hunting-for-a-treat-wants-trying-to-get-goodies-tasty-bone-slow-motion-comic (online-video-cutter.com) (1).mp4"
+    ></video>
+    <div id="main">
+      <div id="page1">
+        <h1>LOVE. NURTURE. PROTECT.</h1>
+        <h2>WELCOME TO PETPAL CONNECT</h2>
+        <p>
+         ~ Where Pets Find Homes, Hearts Find Joy ~
+        </p>
+        <div id="arrow">
+          <i class="ri-arrow-down-line"></i>
+        </div>
+      </div>
+      <div id="page2">
+        <div id="scroller">
+          <div id="scroller-in">
+            <h4>PET LISTINGS</h4>
+            <h4>ADOPET</h4>
+            <h4>PAWCARE</h4>
+            <h4>FUNDRAISING </h4>
+            <h4>EVENTS & WORKSHOPS</h4>
+          </div>
+          <div id="scroller-in">
+            <h4>PET LISTINGS</h4>
+            <h4>ADOPET</h4>
+            <h4>PAWCARE</h4>
+            <h4>FUNDRAISING </h4>
+            <h4>EVENTS & WORKSHOPS</h4>
+          </div>
+        </div>
+        <div id="about-us">
+          <img
+            src="images/Screenshot_2023-08-11_152032-transformed_auto_x2.jpg"
+            alt=""
+          />
+          <div id="about-us-in">
+            <h3>ABOUT US</h3>
+            <p>
+              PetConnect is a vibrant community that promotes pet adoption, responsible ownership, and a shared love for animals. Discover your ideal companion, connect with fellow pet lovers, and access valuable resources for providing the best care to your furry friends
+            </p>
+          </div>
+          <img
+            src="images/HUMANPET1-transformed_auto_x2.jpg"
+            alt=""
+          />
+        </div>
+        <div id="cards-container">
+          <div class="card" id="card1">
+            <div class="overlay">
+              <h4>FUNDRAISING</h4>
+              <p>
+                Join our mission to support pets in need. Your donation to PetConnect empowers adoptions, veterinary care, and education. Together, we're changing lives one paw at a time.
+              </p>
+            </div>
+          </div>
+          <div class="card" id="card2">
+            <div class="overlay">
+              <h4>Adopet</h4>
+              <p>
+                Find your perfect pet companion at PetConnect. Adopt and share love
+              </p>
+            </div>
+          </div>
+          <div class="card" id="card3">
+            <div class="overlay">
+              <h4>PAWCARE</h4>
+              <p>
+                Elevate pet well-being with PawCare by PetConnect. Your source for pet health and happiness
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="green-div">
+          <img
+            src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-side.svg"
+            alt=""
+          />
+          <h4>
+            SIGN UP FOR SIDCUP NEWS AND SPECIAL OFFERS STRAIGHT TO YOUR INBOX
+          </h4>
+          <img
+            src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-side.svg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div id="page3">
+        <p>
+          Connect with PetPal Connect and unlock a world of pet love. Find companionship, access resources, and join a community that celebrates responsible pet care
+        </p>
+        <img
+          id="colon1"
+          src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-left.svg"
+          alt=""
+        />
+        <img
+          id="colon2"
+          src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-right.svg"
+          alt=""
+        />
+      </div>
+      <div id="page4">
+        <h1>WHAT ARE YOU WAITING FOR?</h1>
+        <div class="elem">
+          <h2>PET LISTINGS</h2>
+          <img
+            src="images/Screenshot_2023-08-11_171921-transformed_auto_x2.jpg"
+            alt=""
+          />
+        </div>
+        <div class="elem">
+          <h2>PET LISTINGS</h2>
+          <img
+            src="images/Screenshot_2023-08-11_171804-transformed_auto_x2.jpg"
+            alt=""
+          />
+        </div>
+        <div class="elem">
+          <h2>PET LISTINGS</h2>
+          <img
+            src="images/Screenshot_2023-08-11_171627-transformed_auto_x2.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div id="footer">
+        <img
+          src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-footer.svg"
+          alt=""
+        />
+        <div id="f1">
+          <img
+            src="images/petPallogo-removebg-preview.png"
+            alt=""
+          />
+        </div>
+        <div id="f2">
+          <h3>Pet Listing</h3>
+          <h3>Adopet</h3>
+          <h3>Fundraising</h3>
+        </div>
+        <div id="f3">
+          <h3>Events</h3> 
+          <h3>WorkShops</h3>
+          <h3>Contact us</h3>
+        </div>
+        <div id="f4">
+          <h4>
+           101, Fairhill Avenue, <br />
+            Brampton <br />
+            Ontario <br />
+            L7A 2H5  <br />
+            TEL: +1(437) 755-8709 <br />
+            
+          </h4>
+        </div>
+      </div>
+    </div>
+
+   
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
+      integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"
+      integrity="sha512-IHDCHrefnBT3vOCsvdkMvJF/MCPz/nBauQLzJkupa4Gn4tYg5a6VGyzIrjo6QAUy3We5HFOZUlkUpP0dkgE60A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="javascript/script.js"></script>
+  </body>
+</html>

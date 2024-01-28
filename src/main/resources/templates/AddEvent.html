@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+ xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetPal Connect</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      position: absolute;
+    }
+
+    #nav {
+      background-color:black;
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #nav img {
+      height: 50px;
+    }
+
+    #nav h4 {
+      margin: 0;
+      padding: 0 10px;
+    }
+
+    .form-container {
+      margin-top: 200px; /* Adjust the margin-top as needed */
+      margin-bottom: 40px;
+      padding: 20px;
+      max-width: 1000px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+    <link
+      rel="shortcut icon"
+      href="images/petPallogo-removebg-preview.png"
+      type="image/x-icon"
+    />
+    <link
+      href="images/petPallogo-removebg-preview.png"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="javascript/script.js"></script>
+  </head>
+
+  <body>
+    <div id="nav">
+      <a th:href="@{/}"><img
+        src="images/petPallogo-removebg-preview.png"
+        alt=""
+      />
+    </a>
+      <!-- <h4>Pet Listings</h4> -->
+      <!-- <h4>AdoPet</h4> -->
+      <a th:href="@{/petNews}"><h4>PetNews</h4></a>
+      <a th:href="@{/addDonor}"><h4>Fundraising </h4></a>
+      <a th:href="@{/addEvent}"><h4>Events & WorkShops</h4></a>
+      <a th:href="@{/login}" class="hover-link primary-button"><h4>Login</h4></a>
+      <a th:href="@{/logout}" class="hover-link primary-button"><h4>Logout</h4></a>
+
+    </div>
+
+<div class="form-container">
+    <h2>Book Event Registration</h2>
+
+    <form th:action="@{/addEvent}" method="post" th:object="${event}">        
+        <div class="form-group">
+            <label for="participant_name">Your Name:</label>
+            <input type="text" th:field="*{participantName}" required>
+        </div>
+        <div class="form-group">
+            <label for="event_name">Choose Event Name:</label>
+            <select th:field="*{eventName}" required>
+                <option value="Pet Palooza">Pet Palooza</option>
+                <option value="Furry Friends Fiesta">Furry Friends Fiesta</option>
+                <option value="Paws in the Park">Paws in the Park</option>
+                <option value="Whiskers and Wags Gala">Whiskers and Wags Gala</option>
+                <option value="Bark in the Dark">Bark in the Dark</option>
+                <option value="Meow Mixer">Meow Mixer</option>
+                <option value="Tail Waggin' Trail Run">Tail Waggin' Trail Run</option>
+                <option value="Pet Parade Extravaganza">Pet Parade Extravaganza</option>
+                <option value="Paw-some Playdate">Paw-some Playdate</option>
+                <option value="Pet Wellness Workshop">Pet Wellness Workshop</option>
+            </select>
+        </div>
+        
+
+        <div class="form-group">
+            <label for="event_date">Event Date:</label>
+            <input type="date" th:field="*{eventDate}" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="event_time">Event Time:</label>
+            <input type="time" th:field="*{eventTime}" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="location">Choose Event Location:</label>
+            <select th:field="*{location}" required>
+                <option value="Toronto">Toronto</option>
+                <option value="Brampton">Brampton</option>
+                <option value="Ottawa">Ottawa</option>
+                <option value="North York">North York</option>
+            </select>
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" th:field="*{email}" name="to" placeholder="example@org.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" th:field="*{phone}" required>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+<div id="footer">
+  <img
+    src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-footer.svg"
+    alt=""
+  />
+  <div id="f1">
+    <img
+      src="images/petPallogo-removebg-preview.png"
+      alt=""
+    />
+  </div>
+  <div id="f2">
+    <h3>Pet Listing</h3>
+    <h3>Adopet</h3>
+    <h3>Fundraising</h3>
+  </div>
+  <div id="f3">
+    <h3>Events</h3> 
+    <h3>WorkShops</h3>
+    <h3>Contact us</h3>
+  </div>
+  <div id="f4">
+    <h4>
+     101, Fairhill Avenue, <br />
+      Brampton <br />
+      Ontario <br />
+      L7A 2H5  <br />
+      TEL: +1(437) 755-8709 <br />
+      
+    </h4>
+  </div>
+</div>
+
+</body>
+</html>
